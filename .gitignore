@@ -1,6 +1,3 @@
-vendor/
-javascripts/
-stylesheets/
 build/
 fire_app_log.txt
 .coffeescript-cache
