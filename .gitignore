@@ -1,0 +1,8 @@
+vendor/
+javascripts/
+stylesheets/
+build/
+fire_app_log.txt
+.coffeescript-cache
+.sass-cache
+.DS_Store

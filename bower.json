@@ -1,0 +1,26 @@
+{
+  "name": "SimpleGameFramework",
+  "version": "0.1.0",
+  "description": "My \"Interact Game Programing\" demo.",
+  "authors": [
+    "蒼時弦也"
+  ],
+  "license": "MIT",
+  "homepage": "http://frost.tw/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs-domready": "~2.0.1",
+    "paper": "0.9.9",
+    "pxloader": "git@github.com:thinkpixellab/PxLoader.git",
+    "modernizr": "~2.6.2",
+    "requirejs": "~2.1.9"
+  }
+}
