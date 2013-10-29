@@ -1,4 +1,4 @@
-/*global PxLoader: true, define: true */ 
+/*global PxLoader: true, define: true */
 
 // PxLoader plugin to load images
 function PxLoaderImage(url, tags, priority) {
@@ -91,17 +91,21 @@ function PxLoaderImage(url, tags, priority) {
 }
 
 // add a convenience method to PxLoader for adding an image
-PxLoader.prototype.addImage = function(url, tags, priority) {
-    var imageLoader = new PxLoaderImage(url, tags, priority);
-    this.add(imageLoader);
 
-    // return the img element to the caller
-    return imageLoader.img;
-};
 
 // AMD module support
 if (typeof define === 'function' && define.amd) {
     define('PxLoaderImage', [], function() {
+
+
+      PxLoader.prototype.addImage = function(url, tags, priority) {
+          var imageLoader = new PxLoaderImage(url, tags, priority);
+          this.add(imageLoader);
+
+          // return the img element to the caller
+          return imageLoader.img;
+      };
+
         return PxLoaderImage;
     });
 }

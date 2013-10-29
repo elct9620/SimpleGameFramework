@@ -1,4 +1,4 @@
-/*global PxLoader: true, define: true, soundManager: true */ 
+/*global PxLoader: true, define: true, soundManager: true */
 
 // PxLoader plugin to load sound using SoundManager2
 function PxLoaderSound(id, url, tags, priority) {
@@ -82,15 +82,18 @@ function PxLoaderSound(id, url, tags, priority) {
 }
 
 // add a convenience method to PxLoader for adding a sound
-PxLoader.prototype.addSound = function(id, url, tags, priority) {
-    var soundLoader = new PxLoaderSound(id, url, tags, priority);
-    this.add(soundLoader);
-    return soundLoader.sound;
-};
+
 
 // AMD module support
 if (typeof define === 'function' && define.amd) {
     define('PxLoaderSound', [], function() {
+
+        PxLoader.prototype.addSound = function(id, url, tags, priority) {
+            var soundLoader = new PxLoaderSound(id, url, tags, priority);
+            this.add(soundLoader);
+            return soundLoader.sound;
+        };
+
         return PxLoaderSound;
     });
 }
